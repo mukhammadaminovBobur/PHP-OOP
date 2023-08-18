@@ -1,5 +1,11 @@
 <?php
 
+//inheritance
+//extends
+//parent - child
+//overriding
+//final can not extend class or can not override method
+
 class  Car{
     public $model;
     public $year;
@@ -11,26 +17,36 @@ class  Car{
         $this->year = $year;
     }
 
-
     public function drive()
     {
         return "driving";
     }
 
-    public function getFuel()
+}
+
+class ElectricCar extends Car{
+    public $battery;
+
+    public function charge()
     {
-        return "fueling";
+        return "chrging";
     }
 
-    public function setModel($model)
+    public function drive()
     {
-        $this->model = $model;
+        return "electric driving";
     }
+}
+
+class RaceCar extends Car{
 
 }
 
+class PublicCar extends Car{
 
-$bmw = new Car("BMW", "2019");
-$audi = new Car("Audi", "2023");
+}
 
-echo $audi->drive();
+$tesla = new ElectricCar("Tesla", 2022);
+
+
+var_dump($tesla->drive());
