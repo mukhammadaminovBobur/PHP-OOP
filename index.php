@@ -1,20 +1,22 @@
 <?php
 
-//inheritance
-//extends
-//parent - child
-//overriding
-//final can not extend class or can not override method
+//Access modifiers
+
+//public
+//protected
+//private
 
 class  Car{
     public $model;
-    public $year;
+    protected $year;
+    private $km;
 
 
-    public function __construct($model, $year)
+    public function __construct($model, $year, $km)
     {
         $this->model = $model;
         $this->year = $year;
+        $this->km = $km;
     }
 
     public function drive()
@@ -22,31 +24,41 @@ class  Car{
         return "driving";
     }
 
+    protected function reverse()
+    {
+        return "reverse drive";
+    }
+
+    private function sell()
+    {
+        return "selling";
+    }
+
+
+
 }
 
 class ElectricCar extends Car{
-    public $battery;
-
-    public function charge()
+    public $km;
+    public function getYear()
     {
-        return "chrging";
+        return $this->year;
     }
 
-    public function drive()
+    public function getKm()
     {
-        return "electric driving";
+        return $this->km;
+    }
+
+    public function getReverse()
+    {
+        return $this->reverse();
     }
 }
 
-class RaceCar extends Car{
-
-}
-
-class PublicCar extends Car{
-
-}
-
-$tesla = new ElectricCar("Tesla", 2022);
+$chevy = new Car("Chevrolet", 2023, 15000);
+$tesla = new ElectricCar("Testla", 2023, 64000);
+$tesla->km = 65000;
 
 
-var_dump($tesla->drive());
+echo $tesla->getReverse();
