@@ -4,6 +4,14 @@ class  Car{
     public $model;
     public $year;
 
+
+    public function __construct($model, $year)
+    {
+        $this->model = $model;
+        $this->year = $year;
+    }
+
+
     public function drive()
     {
         return "driving";
@@ -22,8 +30,7 @@ class  Car{
 }
 
 
-$bmw = new Car();
-$bmw->setModel("BMW");
-$bmw->year = "2019";
+$bmw = new Car("BMW", "2019");
+$audi = new Car("Audi", "2023");
 
-echo $bmw->model;
+echo $audi->drive();
