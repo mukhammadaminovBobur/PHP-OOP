@@ -1,12 +1,8 @@
 <?php
 
-//Access modifiers
+//Abstract Classes
 
-//public
-//protected
-//private
-
-class  Car{
+abstract class  Car{
     public $model;
     protected $year;
     private $km;
@@ -18,6 +14,11 @@ class  Car{
         $this->year = $year;
         $this->km = $km;
     }
+
+    //abstract function body will be empty
+    //abstract function must be created in child class
+    //public = public, protected = protected/public
+    abstract public function stop();
 
     public function drive()
     {
@@ -39,26 +40,12 @@ class  Car{
 }
 
 class ElectricCar extends Car{
-    public $km;
-    public function getYear()
+    public function stop()
     {
-        return $this->year;
-    }
-
-    public function getKm()
-    {
-        return $this->km;
-    }
-
-    public function getReverse()
-    {
-        return $this->reverse();
+        return "stop";
     }
 }
 
-$chevy = new Car("Chevrolet", 2023, 15000);
 $tesla = new ElectricCar("Testla", 2023, 64000);
-$tesla->km = 65000;
 
-
-echo $tesla->getReverse();
+var_dump($tesla);
