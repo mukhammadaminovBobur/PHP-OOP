@@ -2,7 +2,7 @@
 
 //Static Methods and Property
 
-class Dog{
+class Dog1{
     public $name;
     public static $weight = 25;
 
@@ -18,4 +18,4 @@ class Dog{
 
 }
 
-echo Dog::$weight;
+echo Dog1::$weight;

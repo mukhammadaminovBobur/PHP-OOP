@@ -25,7 +25,7 @@ interface Animal
 
 }
 
-class Dog implements Animal
+class Dog2 implements Animal
 {
     use AnimarTrait;
     public function makeSound()

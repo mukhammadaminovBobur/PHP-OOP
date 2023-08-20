@@ -6,7 +6,7 @@ interface Animal{
     public function eat();
 }
 
-class Dog implements Animal{
+class Dog3 implements Animal{
     public function makeSound()
     {
         return "woof woof";

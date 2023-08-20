@@ -1,17 +1,8 @@
 <?php
 
-//Constants
-
-class MyDog{
+class Dog{
     public $name;
     public static $weight = 25;
-
-    const NAME = "Bobur";
-
-    public function getName()
-    {
-        return self::NAME;
-    }
 
     public function bark()
     {
@@ -24,6 +15,3 @@ class MyDog{
     }
 
 }
-
-echo MyDog::$weight;
-echo MyDog::NAME;
