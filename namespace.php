@@ -1,7 +1,5 @@
 <?php
 
-//Namespace
-
 use Kitchen\Table;
 use Html\Table as Htable;
 
