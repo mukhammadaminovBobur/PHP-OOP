@@ -2,7 +2,7 @@
 
 //Abstract Classes
 
-abstract class  Car{
+abstract class  Car1{
     public $model;
     protected $year;
     private $km;
@@ -39,7 +39,7 @@ abstract class  Car{
 
 }
 
-class ElectricCar extends Car{
+class ElectricCar extends Car1{
     public function stop()
     {
         return "stop";

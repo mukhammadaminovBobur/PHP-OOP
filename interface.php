@@ -18,7 +18,7 @@ class Dog3 implements Animal{
     }
 }
 
-class Cat implements Animal{
+class Cat3 implements Animal{
     public function makeSound()
     {
         return "Meow meow";

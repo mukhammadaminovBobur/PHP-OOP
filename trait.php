@@ -34,7 +34,7 @@ class Dog2 implements Animal
     }
 }
 
-class Cat implements Animal
+class Cat2 implements Animal
 {
     use AnimarTrait;
     public function makeSound()
@@ -44,6 +44,6 @@ class Cat implements Animal
 
 }
 
-class Kitten extends Cat{
+class Kitten extends Cat2{
     use AnimarTrait, Walking;
 }
